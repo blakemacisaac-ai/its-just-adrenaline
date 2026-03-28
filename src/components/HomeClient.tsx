@@ -140,6 +140,18 @@ export default function HomeClient({ user, profile, completedLessons }: Props) {
           <div className="today-cta">{isNew ? 'Begin →' : 'Continue →'}</div>
         </Link>
 
+        {/* Understand */}
+        <Link href="/understand" className="home-pocket-strip" style={{marginBottom:'10px'}}>
+          <div className="home-pocket-left">
+            <span className="home-pocket-icon">🔬</span>
+            <div>
+              <div className="home-pocket-title">What is actually happening?</div>
+              <div className="home-pocket-sub">Every symptom and thought — demystified</div>
+            </div>
+          </div>
+          <span>→</span>
+        </Link>
+
         {/* The Float */}
         <Link href="/panic" className="home-pocket-strip">
           <div className="home-pocket-left">
