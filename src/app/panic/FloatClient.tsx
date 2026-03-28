@@ -60,17 +60,6 @@ export default function FloatClient() {
 
       <div className="panic-hub-content">
 
-        {/* What is happening */}
-        <div className="panic-truth-card">
-          <div className="panic-truth-label">What is happening right now</div>
-          <p className="panic-truth-text">
-            Your nervous system has fired the alarm. Adrenaline is flooding your body — the
-            same chemical as excitement, the same one that fires before a sprint or a rollercoaster.
-            It feels like danger. It is not danger. It is a sensitised nervous system misfiring.
-            It will peak and pass. It always does. You have survived every single one.
-          </p>
-        </div>
-
         {/* The Float */}
         <div className="float-steps-card">
           <div className="float-steps-title">The Float</div>
