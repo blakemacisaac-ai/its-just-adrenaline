@@ -74,6 +74,17 @@ export default function ProgramClient({ currentLesson, isUnlocked, completedLess
           <div className="arc-title">{part.title}</div>
           <div className="arc-desc">{part.desc}</div>
 
+          {/* Part 1 → Float prerequisite callout */}
+          {activePart === 1 && (
+            <div className="float-unlock-hint">
+              <span className="float-unlock-icon">🌊</span>
+              <div>
+                <div className="float-unlock-title">Complete Part 1 to unlock The Float</div>
+                <div className="float-unlock-desc">Part 1 removes the bewilderment. Once you truly understand what is happening in your body, The Float — the technique that actually ends the fear — becomes available.</div>
+              </div>
+            </div>
+          )}
+
           {/* Lessons */}
           <div className="week-group" style={{marginTop: '20px'}}>
             {part.lessons.map((lesson, idx) => {

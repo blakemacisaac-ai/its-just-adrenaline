@@ -21,7 +21,7 @@ export default function HomeClient({ user, profile, completedLessons }: Props) {
       <nav className="navbar">
         <span className="navbar-logo">{"It's Just"} <span>Adrenaline</span></span>
         <div className="navbar-actions">
-          <Link href="/panic" className="icon-btn" title="Pocket">🌊</Link>
+          <Link href="/panic" className="icon-btn" title="The Float">🌊</Link>
           <form action="/auth/signout" method="POST">
             <button className="icon-btn" title="Sign out">↩</button>
           </form>
@@ -140,13 +140,13 @@ export default function HomeClient({ user, profile, completedLessons }: Props) {
           <div className="today-cta">{isNew ? 'Begin →' : 'Continue →'}</div>
         </Link>
 
-        {/* Pocket */}
+        {/* The Float */}
         <Link href="/panic" className="home-pocket-strip">
           <div className="home-pocket-left">
             <span className="home-pocket-icon">🌊</span>
             <div>
               <div className="home-pocket-title">Feeling it right now?</div>
-              <div className="home-pocket-sub">Open the Float pocket</div>
+              <div className="home-pocket-sub">Open The Float</div>
             </div>
           </div>
           <span>→</span>

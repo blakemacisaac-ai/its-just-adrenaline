@@ -56,8 +56,8 @@ export default function CheckoutPage() {
           <div className="checkout-include">
             <span className="checkout-include-icon">🌊</span>
             <div>
-              <div className="checkout-include-title">The Float Pocket</div>
-              <div className="checkout-include-desc">When anxiety hits right now — the truth, the float instructions, and the breathing tool. Always one tap away.</div>
+              <div className="checkout-include-title">The Float</div>
+              <div className="checkout-include-desc">When anxiety hits right now — the truth, the float instructions, and the breathing tool. Unlocks when you complete Part 1. Always one tap away.</div>
             </div>
           </div>
           <div className="checkout-include">

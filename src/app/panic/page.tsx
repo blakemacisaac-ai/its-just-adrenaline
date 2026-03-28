@@ -1,97 +1,58 @@
-'use client'
-import { useRouter } from 'next/navigation'
+import { createClient } from '@/lib/supabase/server'
+import FloatClient from './FloatClient'
 import Link from 'next/link'
 
-export default function PanicPage() {
-  const router = useRouter()
+export default async function FloatPage() {
+  const supabase = await createClient()
+  const { data: { user } } = await supabase.auth.getUser()
 
-  return (
-    <div className="panic-hub">
-      <div className="panic-hub-header">
-        <button className="alarm-close" onClick={() => router.push('/')}>✕</button>
-      </div>
+  let hasReachedFloat = false
 
-      <div className="panic-hub-content">
+  if (user) {
+    const { data } = await supabase
+      .from('completed_days')
+      .select('day_id')
+      .eq('user_id', user.id)
+      .gte('day_id', 10)
+      .limit(1)
+    hasReachedFloat = (data?.length ?? 0) > 0
+  }
 
-        {/* The truth — top of page */}
-        <div className="panic-truth-card">
-          <div className="panic-truth-label">What is happening right now</div>
-          <p className="panic-truth-text">
-            Your nervous system has fired the alarm. Adrenaline is in your bloodstream.
-            It feels like danger. It is not danger. It is a sensitised nervous system
-            misfiring — the same chemical as excitement, in a body that has learned
-            to be too alert. It will peak and pass. It always does. You have survived
-            every single one.
+  if (!hasReachedFloat) {
+    return (
+      <div className="app-shell">
+        <nav className="navbar">
+          <Link href="/" className="nav-back">← Home</Link>
+        </nav>
+        <div className="page-content" style={{display:'flex',flexDirection:'column',justifyContent:'center',minHeight:'70vh',padding:'40px 24px'}}>
+          <div style={{fontSize:'2.5rem',marginBottom:'24px'}}>🌊</div>
+          <h2 style={{fontFamily:'var(--font-serif)',fontSize:'1.6rem',marginBottom:'16px',lineHeight:'1.3'}}>
+            The Float unlocks in Part 2
+          </h2>
+          <p style={{color:'var(--text)',lineHeight:'1.7',marginBottom:'16px'}}>
+            The Float is the technique. But it only works once the bewilderment is gone.
+          </p>
+          <p style={{color:'var(--text)',lineHeight:'1.7',marginBottom:'16px'}}>
+            Part 1 does one thing: it removes the mystery from what is happening in your body.
+            Once you genuinely understand — not just intellectually, but in your bones — that
+            what you are feeling is adrenaline misfiring, that it cannot hurt you, that every
+            symptom has a direct physiological cause and none of it is dangerous, The Float
+            becomes possible.
+          </p>
+          <p style={{color:'var(--text)',lineHeight:'1.7',marginBottom:'32px'}}>
+            Not before. The technique without the understanding is just another coping strategy.
+            With the understanding, it is the end of the fear.
+          </p>
+          <Link href="/program" className="btn btn-primary">
+            Continue Part 1 →
+          </Link>
+          <p style={{fontSize:'0.8rem',color:'var(--muted)',marginTop:'16px',textAlign:'center'}}>
+            The Float unlocks when you complete Part 1
           </p>
         </div>
-
-        {/* The Float — main instruction */}
-        <div className="float-steps-card">
-          <div className="float-steps-title">The Float</div>
-          <div className="float-step">
-            <div className="float-step-word">Drop</div>
-            <div className="float-step-desc">Shoulders down. Jaw unclenched. Hands open. Soften your belly. Do it now, physically.</div>
-          </div>
-          <div className="float-step-divider" />
-          <div className="float-step">
-            <div className="float-step-word">Slow exhale</div>
-            <div className="float-step-desc">Breathe in naturally. Breathe out slowly — longer than the inhale. This is the brake pedal on your nervous system.</div>
-          </div>
-          <div className="float-step-divider" />
-          <div className="float-step">
-            <div className="float-step-word">Say this</div>
-            <div className="float-step-desc italic">"I know what this is. Adrenaline. A sensitised nervous system. Not danger. I'm not going anywhere."</div>
-          </div>
-          <div className="float-step-divider" />
-          <div className="float-step">
-            <div className="float-step-word">Float</div>
-            <div className="float-step-desc">Don't fight it. Don't flee it. Let it move through you like a wave. Stay soft. It will peak — within minutes — and pass. Every time.</div>
-          </div>
-        </div>
-
-        {/* Weekes quote */}
-        <div className="panic-weekes">
-          "Float, don't fight. The wave cannot drown a person who does not resist it."
-          <span className="panic-weekes-attr">— Dr. Claire Weekes</span>
-        </div>
-
-        {/* Tools */}
-        <div className="panic-tools-label">More tools</div>
-
-        <Link href="/breathe" className="panic-tool-card panic-tool-breathe">
-          <div className="panic-tool-icon">🫁</div>
-          <div>
-            <div className="panic-tool-name">Breathing Timer</div>
-            <div className="panic-tool-desc">4 in · 6 out. Guided exhale to activate the parasympathetic brake.</div>
-          </div>
-          <div className="panic-tool-arrow">→</div>
-        </Link>
-
-        <Link href="/symptoms" className="panic-tool-card panic-tool-symptoms">
-          <div className="panic-tool-icon">🔍</div>
-          <div>
-            <div className="panic-tool-name">What's Happening To Me</div>
-            <div className="panic-tool-desc">Racing heart, derealization, tingling — every symptom explained. None of it dangerous.</div>
-          </div>
-          <div className="panic-tool-arrow">→</div>
-        </Link>
-
-        <Link href="/setback" className="panic-tool-card panic-tool-setback">
-          <div className="panic-tool-icon">🌊</div>
-          <div>
-            <div className="panic-tool-name">Setback Mode</div>
-            <div className="panic-tool-desc">Feels like you've gone backwards? This is a wave, not the tide. Start here.</div>
-          </div>
-          <div className="panic-tool-arrow">→</div>
-        </Link>
-
-        {/* Track record */}
-        <div className="panic-record">
-          <div className="panic-record-num">100%</div>
-          <div className="panic-record-text">Your survival rate. Every panic attack you have ever had ended. This one will too.</div>
-        </div>
-
       </div>
-    </div>
-  )
+    )
+  }
+
+  return <FloatClient />
 }
