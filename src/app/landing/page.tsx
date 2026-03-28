@@ -254,6 +254,7 @@ export default function LandingPage() {
             The reason anxiety symptoms are so frightening is that they arrive without explanation.
             A racing heart at rest. A chest that won't expand. The world going dreamlike and unreal.
             Legs that feel like they'll give way. Tingling where there shouldn't be tingling.
+            A dry mouth, tunnel vision, crushing exhaustion despite doing nothing at all.
             Without knowing what's causing them, the natural conclusion is: something is seriously wrong.
           </p>
           <p className="lp-st-intro">
@@ -268,12 +269,12 @@ export default function LandingPage() {
                 why: 'Adrenaline tells the SA node to fire faster. The heart pumps harder to move blood to the muscles. The pounding you feel is your heart doing its job with unusual force — not failing. Not attacking. Working.'
               },
               {
-                icon: '🫁', name: 'Breathlessness',
-                why: 'Chest muscles tighten as part of the alarm response. Breathing quickens to pull in more oxygen. The paradox: you\'re breathing more than usual, but feel like you can\'t breathe. You are not suffocating. Your blood oxygen is normal or elevated.'
+                icon: '🫁', name: 'Breathlessness & chest tightness',
+                why: 'Three things at once: chest muscles tense under the alarm response, breathing quickens to pull in oxygen, and the oesophagus — which runs directly behind the heart — can spasm under sympathetic activation, producing a squeezing pressure almost indistinguishable from cardiac pain. This is why anxiety chest pain sends people to emergency rooms. Scans come back normal. The cause is muscular spasm. You are not having a heart attack. Your blood oxygen is normal or elevated.'
               },
               {
                 icon: '🌫️', name: 'Derealization',
-                why: 'Rapid breathing lowers CO2 in the blood. CO2 regulates cerebral blood flow — less CO2, slightly less flow to the brain\'s visual and perceptual centres. The dreamlike, unreal quality is blood chemistry. It is completely reversible. Nobody has ever gone mad from it.'
+                why: 'Hyperventilation lowers CO2 in the blood, causing the cerebral arteries to narrow. Studies show cerebral blood flow can drop by up to 40% during sustained hyperventilation. The brain\'s perceptual centres, receiving less blood, produce the dreamlike, unreal, "behind glass" quality. It is blood chemistry — not madness, not a breakdown. Completely reversible, every time, within minutes of breathing normalising.'
               },
               {
                 icon: '⚡', name: 'Tingling & numbness',
@@ -294,6 +295,18 @@ export default function LandingPage() {
               {
                 icon: '😨', name: 'Sense of doom',
                 why: 'The amygdala — your brain\'s threat-detection centre — communicates in one language: danger. When flooded with adrenaline, it sends the maximum alarm signal. The certainty of catastrophe is not evidence of catastrophe. It is the alarm at full volume.'
+              },
+              {
+                icon: '👁️', name: 'Visual disturbances',
+                why: 'Adrenaline dilates the pupils to admit more light — useful for scanning for threats in the dark, overwhelming in normal daylight. The result is photosensitivity, glare, and blurring. Under extreme activation, the visual field itself narrows — the brain prioritises forward threat-detection and filters out peripheral awareness. Tunnel vision in anxiety is literal, physiological, and temporary.'
+              },
+              {
+                icon: '🫙', name: 'Dry mouth',
+                why: 'Saliva production is a parasympathetic ("rest and digest") function. The moment the sympathetic alarm fires, it suppresses the salivary glands. The dry, sticky mouth arrives within seconds — the body has no interest in digestion when it thinks you\'re facing a threat. The moment the alarm quietens, saliva returns.'
+              },
+              {
+                icon: '🪫', name: 'Exhaustion despite doing nothing',
+                why: 'Muscles held in continuous low-level tension under sustained adrenaline burn energy constantly — without any physical movement to show for it. The anxiety sufferer who hasn\'t left the house is often as exhausted as someone who ran a race. They have been running one, inside their own body, all day.'
               },
             ].map((s, i) => (
               <div key={i} className="lp-symptom-card">
@@ -438,6 +451,43 @@ export default function LandingPage() {
               electrical patterns, the brain doing what brains do. A thought about something
               terrible happening is not a prediction of something terrible happening. It is
               a thought. The question is what you do next.
+            </p>
+          </div>
+
+          <div className="lp-thinking-block">
+            <div className="lp-thinking-block-title">Thought-action fusion: when having a thought feels like doing it</div>
+            <p>
+              There is a specific mechanism that makes certain anxious thoughts feel uniquely
+              unbearable — thoughts about harm, about losing control, about terrible things happening
+              to people you love. Researchers call it thought-action fusion. It is the belief,
+              held implicitly at the level of the nervous system rather than consciously, that
+              having a thought and performing an action are morally equivalent — or that thinking
+              something makes it more likely to occur.
+            </p>
+            <p>
+              "If I thought it, it must mean something about me." "If I imagined it, maybe I want it."
+              "If I keep thinking about it, maybe I'll do it." These are the conclusions the anxious
+              mind draws. They feel like moral insights. They are not. They are what happens when
+              a frightened amygdala tags a thought as a threat, and the partially-offline prefrontal
+              cortex cannot supply the corrective: <em>thoughts are not actions, thoughts are not
+              character, thoughts are not predictions.</em>
+            </p>
+            <p>
+              The people who experience the most distressing intrusive thoughts are almost always
+              the people least likely to act on them. The distress is itself the evidence of that —
+              a person with violent or disturbing impulses does not experience those thoughts with
+              horror. They experience them with indifference or pleasure. Horror is the response of
+              a mind that finds the thought completely unacceptable. The thought says nothing about
+              you. It says everything about the state of your nervous system.
+            </p>
+            <p>
+              The mechanism that keeps these thoughts sticky is the same: fighting them, checking
+              whether you're still thinking them, seeking reassurance that you're not a bad person,
+              analysing why the thought appeared — all of it confirms to the amygdala that the
+              content is threatening and important. The way out is the same as it is for every
+              anxious thought: allow it to be there without engaging, without fighting, without
+              seeking the reassurance that never permanently works. The thought can be there.
+              You are still you.
             </p>
           </div>
 
