@@ -1206,3 +1206,84 @@ p { line-height: 1.65; color: var(--ink2); }
   font-size: 0.72rem; color: rgba(255,255,255,0.3);
   text-align: center; line-height: 1.5;
 }
+
+/* ── SYMPTOMS + THOUGHTS SECTIONS ───────────────── */
+.lp-st-label {
+  font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--accent); margin-bottom: 16px;
+}
+.lp-st-headline {
+  font-family: var(--font-serif); font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+  font-weight: 700; color: var(--ink); line-height: 1.15; margin-bottom: 20px;
+}
+.lp-st-intro {
+  font-size: 0.95rem; color: var(--ink2); line-height: 1.8; margin-bottom: 14px;
+}
+
+/* Symptom grid */
+.lp-symptom-grid {
+  display: grid; grid-template-columns: 1fr;
+  gap: 12px; margin: 32px 0 24px;
+}
+@media (min-width: 600px) {
+  .lp-symptom-grid { grid-template-columns: 1fr 1fr; }
+}
+.lp-symptom-card {
+  background: var(--surface); border: 1.5px solid var(--border);
+  border-radius: var(--radius); padding: 18px;
+}
+.lp-symptom-top {
+  display: flex; align-items: center; gap: 10px; margin-bottom: 10px;
+}
+.lp-symptom-icon { font-size: 1.3rem; flex-shrink: 0; }
+.lp-symptom-name { font-size: 0.92rem; font-weight: 600; color: var(--ink); }
+.lp-symptom-why { font-size: 0.8rem; color: var(--muted); line-height: 1.65; margin: 0; }
+.lp-symptom-footer {
+  text-align: center; font-family: var(--font-serif); font-style: italic;
+  font-size: 1rem; color: var(--accent); padding: 16px 0 4px;
+}
+
+/* Thinking section */
+.lp-thinking { background: var(--ink); }
+.lp-thinking .lp-inner { color: white; }
+.lp-thinking-headline {
+  font-family: var(--font-serif); font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 700; color: white; line-height: 1.15; margin-bottom: 40px;
+}
+.lp-thinking-block { margin-bottom: 40px; }
+.lp-thinking-block-title {
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--accent); margin-bottom: 16px;
+}
+.lp-thinking-block p {
+  font-size: 0.92rem; color: rgba(255,255,255,0.75); line-height: 1.85;
+  margin-bottom: 14px;
+}
+.lp-thinking-block p em { color: rgba(255,255,255,0.95); font-style: italic; }
+.lp-thinking-block p:last-child { margin-bottom: 0; }
+
+/* Anxious thoughts list */
+.lp-anxious-thoughts { display: flex; flex-direction: column; gap: 0; margin-top: 4px; }
+.lp-anxious-thought {
+  padding: 18px 0; border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.lp-anxious-thought:first-child { border-top: 1px solid rgba(255,255,255,0.08); }
+.lp-anxious-thought-text {
+  font-family: var(--font-serif); font-style: italic;
+  font-size: 1.05rem; color: white; margin-bottom: 8px; line-height: 1.4;
+}
+.lp-anxious-thought-truth {
+  font-size: 0.83rem; color: rgba(255,255,255,0.6); line-height: 1.7;
+}
+
+/* Thinking proof quote */
+.lp-thinking-proof {
+  margin: 8px 0 40px;
+  border-left: 3px solid var(--accent);
+  padding-left: 24px;
+}
+.lp-thinking-quote {
+  font-family: var(--font-serif); font-style: italic;
+  font-size: 1.05rem; color: rgba(255,255,255,0.9);
+  line-height: 1.65; margin: 0; border: none; padding: 0;
+}

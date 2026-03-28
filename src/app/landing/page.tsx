@@ -243,6 +243,254 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* Symptoms + Thoughts */}
+      <section className="lp-section lp-symptoms-thoughts">
+        <div className="lp-inner">
+
+          {/* Physical */}
+          <div className="lp-st-label">What adrenaline does to your body</div>
+          <h2 className="lp-st-headline">Every symptom has a name. None of them are dangerous.</h2>
+          <p className="lp-st-intro">
+            The reason anxiety symptoms are so frightening is that they arrive without explanation.
+            A racing heart at rest. A chest that won't expand. The world going dreamlike and unreal.
+            Legs that feel like they'll give way. Tingling where there shouldn't be tingling.
+            Without knowing what's causing them, the natural conclusion is: something is seriously wrong.
+          </p>
+          <p className="lp-st-intro">
+            Nothing is seriously wrong. Every single symptom maps directly to adrenaline — one chemical,
+            doing its job with mechanical precision.
+          </p>
+
+          <div className="lp-symptom-grid">
+            {[
+              {
+                icon: '💓', name: 'Racing heart',
+                why: 'Adrenaline tells the SA node to fire faster. The heart pumps harder to move blood to the muscles. The pounding you feel is your heart doing its job with unusual force — not failing. Not attacking. Working.'
+              },
+              {
+                icon: '🫁', name: 'Breathlessness',
+                why: 'Chest muscles tighten as part of the alarm response. Breathing quickens to pull in more oxygen. The paradox: you\'re breathing more than usual, but feel like you can\'t breathe. You are not suffocating. Your blood oxygen is normal or elevated.'
+              },
+              {
+                icon: '🌫️', name: 'Derealization',
+                why: 'Rapid breathing lowers CO2 in the blood. CO2 regulates cerebral blood flow — less CO2, slightly less flow to the brain\'s visual and perceptual centres. The dreamlike, unreal quality is blood chemistry. It is completely reversible. Nobody has ever gone mad from it.'
+              },
+              {
+                icon: '⚡', name: 'Tingling & numbness',
+                why: 'The same CO2 mechanism. Extremities — fingers, lips, feet — receive slightly less flow first, creating pins and needles. Not a stroke. Not neurological damage. Breathing chemistry, fixed the moment breathing normalises.'
+              },
+              {
+                icon: '🤢', name: 'Nausea',
+                why: 'Adrenaline diverts blood from the digestive system to the muscles. Digestion stops mid-process. The churning, sick feeling is your body efficiently reprioritising — not illness. It resolves the moment the adrenaline clears.'
+              },
+              {
+                icon: '🫨', name: 'Trembling & weak legs',
+                why: 'Adrenaline floods the muscles with glucose and primes them for action. With no physical outlet — no running, no fighting — the muscles tremble with stored energy. Your legs will not give way. They have too much energy, not too little.'
+              },
+              {
+                icon: '🔥', name: 'Sweating & flushing',
+                why: 'The body activates its cooling system pre-emptively, expecting physical exertion. Blood is redirected from the skin to core muscles, creating the flush or pallor. The cold sweat is your body preparing for a sprint that isn\'t happening.'
+              },
+              {
+                icon: '😨', name: 'Sense of doom',
+                why: 'The amygdala — your brain\'s threat-detection centre — communicates in one language: danger. When flooded with adrenaline, it sends the maximum alarm signal. The certainty of catastrophe is not evidence of catastrophe. It is the alarm at full volume.'
+              },
+            ].map((s, i) => (
+              <div key={i} className="lp-symptom-card">
+                <div className="lp-symptom-top">
+                  <span className="lp-symptom-icon">{s.icon}</span>
+                  <span className="lp-symptom-name">{s.name}</span>
+                </div>
+                <p className="lp-symptom-why">{s.why}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="lp-symptom-footer">
+            Same chemical. Same alarm system. Every symptom. Every single time.
+          </div>
+        </div>
+      </section>
+
+      {/* Anxious Thinking */}
+      <section className="lp-section lp-thinking">
+        <div className="lp-inner">
+          <div className="lp-st-label" style={{color:'white', opacity:0.5}}>What adrenaline does to your mind</div>
+          <h2 className="lp-thinking-headline">
+            The thoughts feel real.<br />They are not real.<br />They are adrenaline.
+          </h2>
+
+          <div className="lp-thinking-block">
+            <div className="lp-thinking-block-title">Why you can't think clearly when anxious</div>
+            <p>
+              When adrenaline fires, it doesn't just change your body — it changes your brain.
+              The amygdala, your threat-detection centre, activates and partially overrides
+              the prefrontal cortex — the seat of rational thought, perspective, and clear
+              reasoning. Neuroscientists call this an amygdala hijack. Your rational brain
+              doesn't go offline completely, but it goes quiet. The threat-scanner takes over.
+            </p>
+            <p>
+              The threat-scanner does one thing: it looks for danger. It does this fast,
+              broadly, and without nuance. It pattern-matches at speed and flags anything
+              that could conceivably be a threat. In a genuinely dangerous situation this
+              is lifesaving. In a sensitised nervous system with no real threat present,
+              it turns inward — scanning your body, scanning your thoughts, scanning the
+              room — and finding danger everywhere it looks.
+            </p>
+            <p>
+              The thoughts this produces feel like clear reasoning. They don't feel like
+              a frightened smoke detector making noise. They feel like insight.
+              <em> That is the trick.</em> The emotional certainty of the amygdala mimics
+              the clarity of rational thought — but it is not rational thought. It is threat-detection
+              in overdrive, producing conclusions without evidence.
+            </p>
+          </div>
+
+          <div className="lp-thinking-block">
+            <div className="lp-thinking-block-title">The thoughts that feel most true when anxious</div>
+            <div className="lp-anxious-thoughts">
+              {[
+                { thought: '"What if I\'m losing my mind?"', truth: 'You are not. The amygdala produces this thought because "going mad" is a threat. The thought is the alarm making noise — not a psychiatric assessment.' },
+                { thought: '"What if I stop breathing?"', truth: 'You cannot. Breathing is controlled by the brainstem, not by willpower or thought. It is not possible to forget to breathe. Your body will never let that happen.' },
+                { thought: '"What if this is a heart attack?"', truth: 'Anxiety-related heart racing is nowhere near the threshold of cardiac danger. The fear of a heart attack is itself adrenaline-generated — it feeds the alarm and adds more adrenaline.' },
+                { thought: '"I\'m broken. I will never get better."', truth: 'This is the exhausted mind, flooded with cortisol and adrenaline, making long-term predictions from a position of maximum fear. It has never once been right. The nervous system heals.' },
+                { thought: '"Something terrible is about to happen."', truth: 'This is the amygdala\'s only output: maximum danger signal. Check your track record. Something terrible was always "about to happen." How many times has it actually happened?' },
+              ].map((item, i) => (
+                <div key={i} className="lp-anxious-thought">
+                  <div className="lp-anxious-thought-text">{item.thought}</div>
+                  <div className="lp-anxious-thought-truth">{item.truth}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="lp-thinking-block">
+            <div className="lp-thinking-block-title">The proof they aren't real: they don't survive calm</div>
+            <p>
+              Here is the simplest and most important thing to understand about anxious thoughts:
+              when the adrenaline clears and you are genuinely calm, these thoughts dissolve.
+              The certainty that you were losing your mind, that something catastrophic was
+              imminent, that you were fundamentally broken — it evaporates.
+              When calm, you cannot even quite reconstruct why the thought felt so convincing.
+            </p>
+            <p>
+              That is the proof. A real assessment of your situation — a genuine conclusion
+              reached by a functioning rational mind — does not dissolve when a chemical
+              clears from your bloodstream. Only adrenaline-generated fear does that.
+              The thoughts were never true. They were produced by a frightened brain
+              doing what frightened brains do: generating worst-case scenarios at speed.
+            </p>
+            <p>
+              This is not reassurance. This is evidence. You have lived it, every time the
+              anxiety has passed and the catastrophe hasn't arrived. The thoughts have never
+              once survived contact with calm.
+            </p>
+          </div>
+
+          <div className="lp-thinking-block">
+            <div className="lp-thinking-block-title">Why the thoughts loop — and why you can't just stop</div>
+            <p>
+              Alongside adrenaline, the alarm response releases cortisol — a stress hormone
+              that keeps the nervous system on high alert. Cortisol affects the hippocampus
+              (memory and context) and the prefrontal cortex, keeping threat-related material
+              active and accessible. This is why anxious thoughts loop. The brain, under
+              cortisol, keeps returning to the perceived threat compulsively — not as a
+              choice, but as a physiological process. It is trying to solve a problem that
+              has no rational solution, because there is no actual problem.
+            </p>
+            <p>
+              This is also why "just don't think about it" is useless advice. You cannot
+              willpower your way out of a physiological loop. Psychologist Daniel Wegner
+              demonstrated this with a simple experiment: tell someone not to think about
+              a white bear. The bear becomes impossible to evict. The act of suppression
+              keeps the suppressed thought active — you have to keep checking whether you're
+              thinking it, which means thinking it. Trying not to think about something
+              is itself thinking about something.
+            </p>
+            <p>
+              The same mechanism applies to anxious thoughts. The harder you try to push
+              the thought away, the more the brain flags it as important — important enough
+              to keep trying to suppress. The fight with the thought is itself what keeps
+              the thought alive.
+            </p>
+          </div>
+
+          <div className="lp-thinking-block">
+            <div className="lp-thinking-block-title">Sticky thoughts — and what they actually mean</div>
+            <p>
+              Some thoughts don't just loop — they stick. They feel impossible to dislodge.
+              They return with images, certainties, questions that demand answers:
+              <em> What if? What if? What if?</em> The more disturbing or frightening the
+              thought content, the stickier it tends to be — because the amygdala flags
+              high-threat content for priority processing. The brain is not done with it.
+              It keeps returning because it believes it is protecting you.
+            </p>
+            <p>
+              What makes a sticky thought sticky is not its content. It is the relationship
+              you have with it. A thought you can observe with neutrality — "there's that
+              thought again, I know what it is" — passes through. A thought you fight,
+              argue with, try to answer, try to eliminate, or try to reassure yourself
+              about gets amplified. Every engagement with the thought is a signal to the
+              amygdala: this is important, keep monitoring this.
+            </p>
+            <p>
+              The thought itself is not the problem. Thoughts are just events in the mind —
+              electrical patterns, the brain doing what brains do. A thought about something
+              terrible happening is not a prediction of something terrible happening. It is
+              a thought. The question is what you do next.
+            </p>
+          </div>
+
+          <div className="lp-thinking-proof">
+            <blockquote className="lp-thinking-quote">
+              "The thoughts are produced by a frightened brain, not a reasoning one.
+              You do not think like this when you are calm. That is not a coincidence.
+              That is the proof."
+            </blockquote>
+          </div>
+
+          <div className="lp-thinking-block">
+            <div className="lp-thinking-block-title">What to do: allow, don't fight</div>
+            <p>
+              Dr. Claire Weekes had a specific instruction for anxious thoughts: float past them.
+              Not fight them. Not argue with them. Not seek reassurance about them.
+              Not try to answer the "what if" question. Float past them — observe them
+              without engaging, let them be there, and continue.
+            </p>
+            <p>
+              This sounds impossible when you are in the middle of it. The thoughts feel
+              urgent. They demand a response. The "what if" feels like it needs an answer.
+              It doesn't. The "what if" question generated by an adrenaline-flooded amygdala
+              has no satisfying answer — because it was never a real question. It was an alarm
+              making noise. Answering it is like arguing with a smoke detector.
+            </p>
+            <p>
+              The practice is this: when the thought arrives, notice it without engaging.
+              Name it for what it is: <em>"There is that thought. I know what it is.
+              My nervous system is frightened and generating threat-content. This thought
+              does not require a response."</em> Then return your attention to whatever
+              you were doing. Not because the thought has gone — it may still be there —
+              but because engaging with it is what gives it its only power.
+            </p>
+            <p>
+              The thought can be there. You can do whatever you want with it there.
+              You can go to the supermarket with that thought present. You can have a
+              conversation with that thought in the background. You can do your work,
+              be with your family, live your life — with the thought present, not fighting
+              it, not fleeing it, not trying to resolve it. Just letting it be there,
+              untouched. That is the whole practice.
+            </p>
+            <p>
+              And without the fight, the thought has nothing to feed on. It loses urgency.
+              It becomes less sticky. Not immediately — the nervous system takes time to
+              update — but through the accumulation of non-responses, the brain learns:
+              this thought is not important. The amygdala lowers its threat rating.
+              The thought returns less often. Eventually it barely registers at all.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Track record */}
       <section className="lp-section lp-record">
         <div className="lp-inner">
