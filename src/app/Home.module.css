@@ -1,0 +1,93 @@
+.wrap { padding-bottom: 8px; }
+
+.header { padding: 28px 24px 20px; }
+.greeting { font-size: 0.8rem; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 6px; }
+.title { font-family: 'Lora', serif; font-size: clamp(1.7rem, 5vw, 2.2rem); line-height: 1.15; }
+.title em { font-style: italic; color: var(--accent); }
+
+/* Check-in */
+.checkinCard {
+  margin: 0 24px 20px;
+  background: var(--ink);
+  border-radius: var(--radius);
+  padding: 24px;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+.checkinCard::before {
+  content: '';
+  position: absolute; top: -30px; right: -30px;
+  width: 140px; height: 140px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(200,116,74,0.35) 0%, transparent 70%);
+}
+.checkinLabel { font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 10px; }
+.checkinQ     { font-family: 'Lora', serif; font-size: 1.1rem; margin-bottom: 20px; line-height: 1.4; }
+.checkinDone  { padding: 4px 0; }
+.checkinMsg   { font-size: 0.9rem; color: rgba(255,255,255,0.7); line-height: 1.6; margin-top: 6px; }
+.checkinMsg strong { color: var(--accent); }
+
+.nsScale { display: flex; gap: 8px; justify-content: space-between; }
+.nsBtn {
+  flex: 1; height: 52px; border-radius: 12px;
+  border: 1.5px solid rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.06); color: rgba(255,255,255,0.7);
+  font-family: 'Outfit', sans-serif; cursor: pointer; transition: all 0.2s;
+  display: flex; align-items: center; justify-content: center;
+  flex-direction: column; gap: 2px;
+}
+.nsBtn:hover { background: rgba(255,255,255,0.14); border-color: rgba(255,255,255,0.3); color: white; }
+.nsNum { font-size: 1rem; font-weight: 600; }
+.nsLab { font-size: 0.58rem; opacity: 0.6; }
+
+/* Today card */
+.todayCard {
+  display: block; text-decoration: none; color: inherit;
+  margin: 0 24px 20px;
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  cursor: pointer; transition: transform 0.2s, box-shadow 0.2s;
+}
+.todayCard:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+.todayBadge { background: var(--accent); color: white; padding: 9px 16px; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; }
+.todayBody  { padding: 20px; }
+.todayArc   { font-size: 0.75rem; color: var(--muted); margin-bottom: 6px; }
+.todayTitle { font-family: 'Lora', serif; font-size: 1.2rem; margin-bottom: 10px; }
+.todayExcerpt { font-size: 0.88rem; color: var(--ink2); line-height: 1.6; margin-bottom: 16px; }
+.todayMeta  { display: flex; gap: 10px; flex-wrap: wrap; }
+.pill { background: var(--bg2); border-radius: 100px; padding: 5px 10px; font-size: 0.72rem; color: var(--muted); }
+
+/* Stats */
+.statsRow { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; margin: 0 24px 24px; }
+.statCard { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 16px 12px; text-align: center; }
+.statNum  { font-family: 'Lora', serif; font-size: 1.8rem; color: var(--accent); }
+.statLab  { font-size: 0.72rem; color: var(--muted); margin-top: 2px; }
+
+/* Principles */
+.principlesGrid { display: grid; grid-template-columns: repeat(2,1fr); gap: 12px; padding: 0 24px; margin-bottom: 24px; }
+.principleCard {
+  background: var(--surface); border: 1.5px solid var(--border);
+  border-radius: 16px; padding: 18px 16px; cursor: pointer; transition: all 0.2s;
+}
+.principleCard:hover { border-color: var(--accent); background: var(--accent-light); }
+.pIcon { font-size: 24px; margin-bottom: 8px; }
+.pWord { font-family: 'Lora', serif; font-size: 1rem; font-weight: 600; margin-bottom: 4px; }
+.pDesc { font-size: 0.78rem; color: var(--muted); line-height: 1.5; }
+
+/* Panic */
+.panicBtn {
+  display: flex; align-items: center; justify-content: space-between;
+  margin: 0 24px 8px;
+  padding: 18px 20px; border-radius: var(--radius);
+  background: linear-gradient(135deg, #7a1a1a 0%, #b83030 100%);
+  color: white; text-decoration: none; cursor: pointer;
+  transition: all 0.2s; font-family: 'Outfit', sans-serif;
+}
+.panicBtn:hover { transform: scale(1.01); box-shadow: 0 8px 24px rgba(180,48,48,0.3); }
+.panicLeft { display: flex; align-items: center; gap: 14px; }
+.panicIcon { font-size: 28px; }
+.panicTitle { font-family: 'Lora', serif; font-size: 1rem; font-weight: 600; }
+.panicSub   { font-size: 0.78rem; opacity: 0.7; }

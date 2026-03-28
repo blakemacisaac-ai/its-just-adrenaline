@@ -1,0 +1,67 @@
+.page {
+  min-height: 100vh; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; padding: 32px 24px;
+  gap: 24px;
+}
+
+.top { text-align: center; }
+.logo {
+  font-family: 'Lora', serif; font-size: 1.6rem; font-style: italic;
+  color: var(--ink); margin-bottom: 8px;
+}
+.logo span { color: var(--accent); }
+.tagline { font-size: 0.85rem; color: var(--muted); max-width: 280px; line-height: 1.6; }
+
+.card {
+  width: 100%; max-width: 380px;
+  background: var(--surface); border: 1.5px solid var(--border);
+  border-radius: var(--radius); padding: 32px 28px;
+  box-shadow: var(--shadow);
+}
+
+.title { font-family: 'Lora', serif; font-size: 1.4rem; margin-bottom: 24px; }
+
+.form { display: flex; flex-direction: column; gap: 16px; margin-bottom: 16px; }
+
+.field { display: flex; flex-direction: column; gap: 6px; }
+.label { font-size: 0.8rem; font-weight: 500; color: var(--ink2); }
+.input {
+  padding: 12px 14px; border-radius: 12px;
+  border: 1.5px solid var(--border); background: var(--bg);
+  font-family: 'Outfit', sans-serif; font-size: 0.95rem; color: var(--ink);
+  transition: border-color 0.2s; width: 100%;
+}
+.input:focus { outline: none; border-color: var(--accent); }
+.input::placeholder { color: var(--muted); }
+
+.error {
+  background: rgba(200,74,74,0.1); border: 1px solid rgba(200,74,74,0.3);
+  border-radius: 10px; padding: 10px 14px;
+  font-size: 0.85rem; color: #c84a4a;
+}
+
+.submitBtn { margin-top: 4px; }
+
+.magicToggle {
+  width: 100%; padding: 12px; background: transparent;
+  border: 1.5px solid var(--border); border-radius: 12px;
+  font-family: 'Outfit', sans-serif; font-size: 0.85rem;
+  color: var(--ink2); cursor: pointer; transition: all 0.2s;
+  margin-bottom: 20px;
+}
+.magicToggle:hover { border-color: var(--accent2); color: var(--accent2); }
+
+.switchLink { text-align: center; font-size: 0.85rem; color: var(--muted); }
+.switchLink a { color: var(--accent); text-decoration: none; font-weight: 500; }
+.switchLink a:hover { text-decoration: underline; }
+
+.successIcon { font-size: 40px; text-align: center; margin-bottom: 16px; }
+
+.sub { font-size: 0.9rem; color: var(--ink2); line-height: 1.7; text-align: center; margin-top: 8px; }
+.sub strong { color: var(--ink); }
+
+.freeBadge {
+  font-size: 0.78rem; color: var(--muted); text-align: center;
+  background: var(--green-light); border-radius: 100px; padding: 8px 20px;
+  color: var(--green);
+}
