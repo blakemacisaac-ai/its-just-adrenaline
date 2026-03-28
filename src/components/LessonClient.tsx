@@ -71,16 +71,14 @@ export default function LessonClient({
 
   async function markComplete() {
     if (!userId || completed) return
-    try {
-      await fetch('/api/complete-day', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ dayId: lesson.id })
-      })
-      setCompleted(true)
-    } catch (e) {
-      console.error(e)
-    }
+    const supabase = createClient()
+    const { error } = await supabase.from('completed_days').upsert(
+      { user_id: userId, day_id: lesson.id },
+      { onConflict: 'user_id,day_id' }
+    )
+    if (error) { showToast('Error saving — try again'); console.error(error); return }
+    setCompleted(true)
+    router.refresh()
   }
 
   const blocks = parseBlocks(lesson.lesson.body)
