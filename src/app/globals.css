@@ -136,6 +136,11 @@ p { line-height: 1.65; color: var(--ink2); }
 .day-title-text { font-size: 0.9rem; font-weight: 500; margin-bottom: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .day-meta-text { font-size: 0.75rem; color: var(--muted); }
 
+/* ── ANCHORS LINK ───────────────────────────────── */
+.anchors-link-row { display: flex; align-items: center; gap: 10px; background: var(--card); border-radius: var(--radius); padding: 14px 16px; font-size: 0.9rem; color: var(--text); text-decoration: none; margin-bottom: 16px; }
+.anchors-link-row span:first-child { font-size: 1.1rem; }
+.anchors-link-arrow { margin-left: auto; opacity: 0.4; }
+
 /* ── PAYWALL ────────────────────────────────────── */
 .paywall-banner { background: linear-gradient(135deg, var(--ink) 0%, #2a1f14 100%); border-radius: var(--radius); padding: 28px 20px; color: white; text-align: center; margin-top: 8px; }
 .paywall-banner h3 { font-family: var(--font-serif); font-size: 1.2rem; margin-bottom: 8px; }

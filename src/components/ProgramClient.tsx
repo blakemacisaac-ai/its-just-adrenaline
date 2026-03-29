@@ -48,6 +48,13 @@ export default function ProgramClient({ currentLesson, isUnlocked, completedLess
           <p style={{fontSize:'0.8rem',color:'var(--muted)',marginTop:'4px'}}>Move on when you understand — not on a schedule.</p>
         </div>
 
+        {/* Anchors link */}
+        <Link href="/anchors" className="anchors-link-row">
+          <span>⚓</span>
+          <span>Your Anchors</span>
+          <span className="anchors-link-arrow">→</span>
+        </Link>
+
         {/* Progress */}
         <div className="program-progress-bar-wrap">
           <div className="program-progress-bar">
