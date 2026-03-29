@@ -26,4 +26,4 @@ create policy "Users can manage own journals" on public.journal_entries
 
 create trigger set_journals_updated_at
   before update on public.journal_entries
-  for each row execute function public.handle_updated_at();
+  for each row execute function public.set_updated_at();
