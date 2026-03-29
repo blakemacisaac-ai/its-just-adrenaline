@@ -4,6 +4,16 @@
 -- Drop the old table (it only had day_id + content, nothing worth keeping)
 drop table if exists public.journal_entries cascade;
 
+-- Ensure the updated_at helper function exists
+create or replace function public.set_updated_at()
+returns trigger language plpgsql
+as $$
+begin
+  new.updated_at = now();
+  return new;
+end;
+$$;
+
 -- Recreate with the full schema
 create table public.journal_entries (
   id             uuid primary key default uuid_generate_v4(),
