@@ -7,7 +7,7 @@ const NAV: NavItem[] = [
   { href: '/',           icon: '🏠', label: 'Home',      key: 'home' },
   { href: '/program',    icon: '📖', label: 'Programme', key: 'program' },
   { href: '/panic',      icon: '🌊', label: 'The Float', key: 'panic' },
-  { href: '/understand', icon: '🔬', label: 'Understand', key: 'understand' },
+  { href: '/anchors',    icon: '⚓', label: 'Anchors',   key: 'anchors' },
   { href: '/journal',    icon: '📋', label: 'Journal',   key: 'journal' },
 ]
 

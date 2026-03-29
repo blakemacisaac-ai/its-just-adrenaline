@@ -56,6 +56,13 @@ export default function ProgramClient({ currentLesson, isUnlocked, completedLess
           <div className="program-progress-label">{completedCount} of {totalLessons} lessons</div>
         </div>
 
+        {/* Understand link */}
+        <Link href="/understand" className="anchors-link-row">
+          <span>🔬</span>
+          <span>Symptoms &amp; Anxious Thinking — Explained</span>
+          <span className="anchors-link-arrow">→</span>
+        </Link>
+
         {/* Part tabs */}
         <div className="arc-tabs">
           {PROGRAM.map(p => (
