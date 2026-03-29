@@ -43,13 +43,17 @@ create index checkins_user_date on public.checkins(user_id, checked_at desc);
 
 -- ─── JOURNAL ENTRIES ─────────────────────────────────────────
 create table public.journal_entries (
-  id         uuid primary key default uuid_generate_v4(),
-  user_id    uuid references public.profiles(id) on delete cascade not null,
-  day_id     int  not null,
-  content    text not null default '',
-  updated_at timestamptz not null default now(),
-  created_at timestamptz not null default now(),
-  unique(user_id, day_id)
+  id              uuid primary key default uuid_generate_v4(),
+  user_id         uuid references public.profiles(id) on delete cascade not null,
+  prediction      text not null default '',
+  intensity       int  not null default 0,
+  floated         boolean,
+  what_happened   text not null default '',
+  body_sensations text,
+  second_fear     text,
+  insight         text,
+  created_at      timestamptz not null default now(),
+  updated_at      timestamptz not null default now()
 );
 
 alter table public.journal_entries enable row level security;

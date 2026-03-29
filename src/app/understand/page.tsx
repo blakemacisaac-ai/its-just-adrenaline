@@ -340,7 +340,7 @@ export default function UnderstandPage() {
 
       </div>
 
-      <BottomNav />
+      <BottomNav active="understand" />
     </div>
   )
 }

@@ -4,11 +4,11 @@ import { usePathname } from 'next/navigation'
 
 type NavItem = { href: string; icon: string; label: string; key: string }
 const NAV: NavItem[] = [
-  { href: '/',          icon: '🏠', label: 'Home',      key: 'home' },
-  { href: '/program',   icon: '📖', label: 'Programme', key: 'program' },
-  { href: '/panic',     icon: '🌊', label: 'The Float', key: 'panic' },
-  { href: '/anchors',   icon: '⚓', label: 'Anchors',   key: 'anchors' },
-  { href: '/journal',   icon: '📋', label: 'Journal',   key: 'journal' },
+  { href: '/',           icon: '🏠', label: 'Home',      key: 'home' },
+  { href: '/program',    icon: '📖', label: 'Programme', key: 'program' },
+  { href: '/panic',      icon: '🌊', label: 'The Float', key: 'panic' },
+  { href: '/understand', icon: '🔬', label: 'Understand', key: 'understand' },
+  { href: '/journal',    icon: '📋', label: 'Journal',   key: 'journal' },
 ]
 
 export default function BottomNav({ active }: { active?: string }) {
